@@ -4,6 +4,7 @@ body
     margin-left: 300px;
     margin-right: 200px;
     margin-top: 50px;
+    align-items: center;
 }
 
 
@@ -69,7 +70,6 @@ img:hover
     float:left;
     font-size: 11px;
     position: relative;
-    text-align:justify;
     width: 530px;
     line-height: 30px;
     padding: 1px;
