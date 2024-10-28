@@ -2,6 +2,8 @@
 
 import Header from "../components/Header.astro";
 
+
+let gifURL = "https://steamuserimages-a.akamaihd.net/ugc/2260310642883165566/A9BA0BCAB3D22F5FCC8675D264A781D5D363835B/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true";
 interface Props {
 	title: string;
 	description?: string;
@@ -9,7 +11,7 @@ interface Props {
 }
 
 const { title, description = "This is Noihirsch's blog",
-image = "/images/hi.jgp" } = Astro.props;
+image = "/images/frieren.gif" } = Astro.props;
 
 ---
 
@@ -27,7 +29,7 @@ image = "/images/hi.jgp" } = Astro.props;
 	<body class="min-h-screen">
 		<Header/>
 		<slot/>
-	</body>
+		<img src={image === gifURL ? image : gifURL} alt="Frieren" style="height: 300px; margin-left:15%; margin-top:3%"/>	</body>
 </html>
 <style is:global>
 	:root {
@@ -43,7 +45,7 @@ image = "/images/hi.jgp" } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #000000;
+		background: #000025;
 	}
 	code {
 		font-family:
