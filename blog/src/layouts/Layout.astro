@@ -10,8 +10,7 @@ interface Props {
 	image?: string;
 }
 
-const { title, description = "This is Noihirsch's blog",
-image = "/images/frieren.gif" } = Astro.props;
+const { title, description = "This is Noihirsch's blog", image = gifURL } = Astro.props;
 
 ---
 
@@ -29,7 +28,6 @@ image = "/images/frieren.gif" } = Astro.props;
 	<body class="min-h-screen">
 		<Header/>
 		<slot/>
-		<img src={image === gifURL ? image : gifURL} alt="Frieren" style="height: 300px; margin-left:15%; margin-top:3%"/>	</body>
 </html>
 <style is:global>
 	:root {
