@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Main from '../components/Main.astro';
+import Footer from '../components/Footer.astro';
+import P from '../components/P.astro';
+import H3 from '../components/H3.astro';
+import List from '../components/List.astro';
+
+const interests = ["retro gaming and computing", "reading", "HEMA (historical fencing)", "swimming", "coding", "fashion", "politics", "tcgs (mtg and optcg)",  "anime (mostly keeping up with one piece", "ttrpgs (mostly dnd nowadays, but I'm really fond of anything wod!)","videogames (dead by daylight, baldur's gate 3, some cozy games here and there, etc)"];
+const favs = ["music: ghost, sleep token, rammstein, nightwish, nine ice kills, mcr", "book: cannot pick, probably the name of the wind by patrick rothfuss?", "programming language: java<3", "fashion style: glam, whimsygoth mixed with mall-emo. My fashion sense is constantly evolving."];
+---
+
+<Layout title="about me">
+    <Main style="display: flex; flex-direction: column; align-items: center; width: 400px; margin: 0 auto;">
+       <H3 text="About me ✮"></H3>
+        <P text="I go by she/they pronouns. I'm based in Spain but I travel whenever I have the chance to. I am on the spectrum, so I might appear cold at first, but I love meeting people, so please feel free to reach out! ⸜(｡˃ ᵕ ˂ )⸝♡"></P>
+        <P text="interests: "></P>
+        <ul style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+            <List items={interests}></List>
+        </ul>
+                <img src="./badges/divider.webp">
+
+        <P text="favourites: "></P>
+        <ul style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+            <List items={favs}></List>
+        </ul>
+
+          
+		<Footer />
+    </Main>
+
+</Layout>

@@ -1,20 +1,77 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import H1 from '../components/H1.astro';
+import H3 from '../components/H3.astro';
 import Main from '../components/Main.astro';
 import P from '../components/P.astro';
-import Gif from '../components/Gif.astro';
 import Footer from '../components/Footer.astro';
+import "../styles/global.css";
 ---
+
+<style>
+
+.sticker-container {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 1rem;
+
+	}
+	.badge-container {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 1rem;
+	}
+  
+	.badge-container img {
+	  max-width: 80%; 
+	  width: 8%;
+	  height: 4%;
+	}
+
+
+	.badge-container a img {
+	  max-width: 80%;
+	  width: 8%;
+	  height: 4%;
+	}
+</style>
 
 <Layout title="uwu">
 	<Main>
-		<H1 text="welcome"></H1>
-		<P text="hi my name is noi. I'm an informatics engineering undergrad and a web development associate's degree graduate."></P>
-		<P text="i really like reading books, doing art and playing ttrpgs."></P>
-		<P text="i'm an open source advocate."></P><br>
-		<Gif url="https://64.media.tumblr.com/3250a784972f89cdbfea253965c34cd0/f21b5a88cdd2d1f6-b0/s540x810/1ca346168391c0af6d6d036ad6ce46a1f0605511.gif"></Gif>
-		<Footer/>
+		<H3 text="✮ welcome ✮"></H3>
+		<P text=" > Associate's degree in Web application development graduate. Studying Bsc in Computer Science."></P>
+		<P text="My main interest is cybersecurity and I'm studying networks and operative systems atm."></P>
+		<P text="I'm an open source advocate."></P>
+		<Footer />
+
+		<div class="badge-container">
+			<img src="./badges/gnu-linux.gif" alt="linux badge">
+			<img src="./badges/g4.gif" alt="badge b">
+			<img src="./badges/gplv3.gif" alt="badge b">
+			<img src="./badges/konata.gif" alt="badge a">
+			<img src="./badges/ilovehorror.gif" alt="badge b">
+			<img src="./badges/linux_mint.gif" alt="badge b">
+			<img src="./badges/ubuntu.gif" alt="badge b">
+			<img src="./badges/a53.gif" alt="badge b">
+
+		</div>
+		<div class="badge-container">
+		<img src="./badges/d93.png" alt="badge a">
+		<img src="./badges/windowsxp.jpg" alt="badge a">
+		<img src="./badges/sanji.webp" alt="badge a">
+		<img src="./badges/j8.png" alt="badge a">
+		<img src="./badges/k18.gif" alt="badge a">
+		<img src="./badges/mlp.png" alt="badge a">
+		<img src="./badges/b56.png">
+		</div>
+		<div class="sticker-container">
+			<img src="./badges/vampires2.webp" alt="badge a">
+			<img src="./badges/g44.gif" alt="badge a">
+			<img src="./badges/e108.gif" alt="badge a">
+			<img src="./badges/0178-mikuwink2.gif" alt="badge a">
+
+			2024
+			</div>
+
+
 	</Main>
 </Layout>
-

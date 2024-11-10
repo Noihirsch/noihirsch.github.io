@@ -1,7 +1,7 @@
 ---
 
 import Header from "../components/Header.astro";
-
+import "../styles/global.css";
 
 let gifURL = "https://steamuserimages-a.akamaihd.net/ugc/2260310642883165566/A9BA0BCAB3D22F5FCC8675D264A781D5D363835B/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true";
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 	image?: string;
 }
 
-const { title, description = "This is Noihirsch's blog", image = gifURL } = Astro.props;
+const { title, description = "noihirch", image = gifURL } = Astro.props;
 
 ---
 
@@ -30,6 +30,8 @@ const { title, description = "This is Noihirsch's blog", image = gifURL } = Astr
 		<slot/>
 </html>
 <style is:global>
+
+	
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -43,7 +45,7 @@ const { title, description = "This is Noihirsch's blog", image = gifURL } = Astr
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #000025;
+		background: #090909;
 	}
 	code {
 		font-family:

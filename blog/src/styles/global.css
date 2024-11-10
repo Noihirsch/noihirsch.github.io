@@ -1,0 +1,12 @@
+body {
+    cursor: url('/badges/sakura.webp'), auto;
+  }
+  
+  button,
+  a {
+    cursor: pointer; 
+  }
+  
+  a:hover {
+    cursor: url('/badges/sakura2.webp'), auto; 
+  }
