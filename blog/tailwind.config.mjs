@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 					colors: {
-					  computerRed: '#ff0000', // Replace with your color
+					  pinkiePiePink: '#f071b4', // Replace with your color
 					},
 				  },
 	},
