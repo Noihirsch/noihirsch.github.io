@@ -2,16 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
 import Footer from '../components/Footer.astro';
-import PubData from '../components/PubData.astro';
 import "../styles/global.css";
 
 type Props = {
   title: string;
   pubDate: string;
-  description?: string;
 };
 
-const { title, pubDate, description } = Astro.props;
+const { title, pubDate } = Astro.props;
 ---
 
 <Layout title={title}>

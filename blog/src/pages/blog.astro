@@ -7,15 +7,15 @@ import Pub from '../components/Pub.astro';
 
 const postModules = import.meta.glob('./blog/*.mdx', { eager: true }); // eager to import immediately
 
-// Transform object to array and map useful data
 const posts = Object.entries(postModules).map(([path, post]) => {
+  const mod = post as { frontmatter: { title: string; pubDate: string; description?: string } };
+
   return {
     url: path.replace('./', '/').replace('.mdx', ''),
-    ...post.frontmatter
+    ...mod.frontmatter
   };
 });
 
-posts.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 ---
 
 <link rel="icon" href="/favicon.ico" />
