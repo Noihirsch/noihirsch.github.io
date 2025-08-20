@@ -2,15 +2,33 @@
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
 import Footer from '../components/Footer.astro';
-import P from '../components/P.astro';
 import H3 from '../components/H3.astro';
+import Pub from '../components/Pub.astro';
 
+const postModules = import.meta.glob('./blog/*.mdx', { eager: true }); // eager to import immediately
+
+// Transform object to array and map useful data
+const posts = Object.entries(postModules).map(([path, post]) => {
+  return {
+    url: path.replace('./', '/').replace('.mdx', ''),
+    ...post.frontmatter
+  };
+});
+
+posts.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 ---
+
 <link rel="icon" href="/favicon.ico" />
 <Layout title="♡ my blog">
-    <Main>
-        <H3 text="♡ my blog">
-        <P text="On the making"></P>
-    </Main>
-    <Footer></Footer>
+  <Main>
+    <H3 text="♡ my blog" />
+    <ul>
+      {posts.map(post => (
+        <li>
+          <Pub href={post.url} title={post.title} pubDate={post.pubDate} />
+        </li>
+      ))}
+    </ul>
+  </Main>
+  <Footer />
 </Layout>
