@@ -16,7 +16,6 @@ const { title, pubDate, description } = Astro.props;
 
 <Layout title={title}>
   <Main>
-    <PubData title={title} pubDate={pubDate} description={description} />
     <article class="prose prose-invert mt-6">
       <slot />
     </article>
