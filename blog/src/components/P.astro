@@ -1,11 +1,14 @@
 ---
 type Props = {
-    text: string;
+  text: string;
 };
 
 const { text } = Astro.props;
 ---
 
-<p class="text-left font-mono leading-[3rem] text-pinkiePiePink">{text}</p>
+<p id="beep-text" class="text-left  font-mono leading-[2rem] text-white" style="font-size: 0.9rem;">
+
+  {text}
+</p>
 
 

@@ -5,15 +5,33 @@ import "../styles/global.css";
 
 --- 
 
-<footer class=" text-pinkiePiePink py-4 text-center font-mono">
-    <div class="container mx-auto px-6">
+ <style>
+    li {
+      position: relative;
+      display: inline-block;
+      color: pinkiePiePink;
+      overflow:hidden;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+  
+    nav li:hover {
+      background: #b4005c;
+      color:black;
+
+    }
+  </style>
+
+<footer class=" text-pinkiePiePink py-2 text-center font-mono">
+    <div class="container mx-auto px-2"></div>
       <Gif src="./badges/doffy.gif"></Gif>
 
       <nav>
-        <ul class="list-none p-8">|
-          <li class="inline mx-2"><a href="/about" class="text-pinkiePiePink hover:underline">Bluesky</a></li> |
-          <li class="inline mx-2"><a href="https://github.com/Noihirsch" class="hover:underline">Instagram</a></li> | 
-          <li class="inline mx-2"><a href="/blog" class="hover:underline">Github</a></li> | 
+        <ul class="list-none p-8">
+          <li class="inline mx-2"><a href="https://cyberplace.social/@noidev" >mastodon</a></li> |
+          <li class="inline mx-2"><a href="https://app.hackthebox.com/profile/">twitter</a></li> | 
+          <li class="inline mx-2"><a href="https://x.com/noidevp">github</a></li> | 
+          <li class="inline mx-2"><a href="https://app.hackthebox.com/profile/sudonoi">htb</a></li> 
         </ul>
       </nav>
     </div>

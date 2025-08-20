@@ -4,9 +4,13 @@ export default {
 	theme: {
 		extend: {
 					colors: {
-					  pinkiePiePink: '#f071b4', // Replace with your color
+					  pinkiePiePink: '#D5006D', // Replace with your color
+					},
+					fontFamily:{
+						timesNewRoman:['"Times New Roman', 'serif'],
 					},
 				  },
+
 	},
 	plugins: [],
 }

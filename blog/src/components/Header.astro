@@ -1,16 +1,35 @@
-<header class="flex justify-between items-center px-2 py-12 max-sem:px-5 max-sm:py-10 max-w-7xl w-full mx-auto">
+<header class="flex justify-center items-center px-2 py-12 max-[768px]:px-7 max-sm:py-10 max-w-6xl w-full mx-auto">
 
     <div class="logo">
       <a href="/" class="text-2xl font-bold text-pinkiePiePink font-mono"></a>
     </div>
   
     <nav aria-label="Main Navigation">
-      <ul class="flex gap-x-8">
+      <ul class="flex gap-x-7">
         <li><a href="/" class="text-pinkiePiePink font-mono">Home</a></li>
         <li><a href="/about" class="text-pinkiePiePink font-mono">About</a></li>
-        <li><a href="/about" class="text-pinkiePiePink font-mono">Articles</a></li>
-        <li><a href="/blog" class="text-pinkiePiePink font-mono">Projects</a></li>
-        <li><a href="/blog" class="text-pinkiePiePink font-mono">Reading list</a></li>
+        <li><a href="/blog" class="text-pinkiePiePink font-mono">Articles</a></li>
+        <li><a href="/projects" class="text-pinkiePiePink font-mono">Projects</a></li>
+        <li><a href="/books" class="text-pinkiePiePink font-mono">Reading list</a></li>
       </ul>
     </nav>
   </header>
+
+  <style>
+    a {
+      position: relative;
+      display: inline-block;
+      color: pinkiePiePink;
+      overflow:hidden;
+      transition: 0.2s;
+      
+    }
+  
+    nav a:hover {
+      background: #b4005c;
+      color:black;
+      text-decoration: none;
+
+    }
+  </style>
+  
