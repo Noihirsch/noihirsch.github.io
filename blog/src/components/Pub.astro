@@ -1,0 +1,23 @@
+---
+type Props = {
+  href: string;
+  title: string;
+  pubDate?: string;
+};
+
+const { href, title, pubDate } = Astro.props;
+---
+
+<a 
+  href={href} 
+  class="text-left font-mono leading-[2rem] text-white hover:text-[#d5006d]" 
+  style="font-size: 0.9rem;"
+  id="beep-link"
+>
+   - {title}
+
+  {pubDate && (
+  <small class="ml-2 text-sm text-white">- {pubDate}</small>
+)}
+</a>
+
